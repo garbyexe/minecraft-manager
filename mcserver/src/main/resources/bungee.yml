@@ -1,0 +1,5 @@
+name: GarbyServer
+version: '${project.version}'
+main: dev.garby.mcserver.Mcserver
+description: Private Server management
+author: garbyexe
