@@ -1,0 +1,5 @@
+name: GarbyServer
+version: '1.0-DEV'
+main: dev.garby.mcserver.Mcserver
+description: Private Server management
+author: garbyexe
