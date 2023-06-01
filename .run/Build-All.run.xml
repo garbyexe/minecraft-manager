@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Build-All" type="CompoundRunConfigurationType">
+    <toRun name="Build - Manager" type="MavenRunConfiguration" />
+    <toRun name="Build - Plugin" type="MavenRunConfiguration" />
+    <method v="2" />
+  </configuration>
+</component>
