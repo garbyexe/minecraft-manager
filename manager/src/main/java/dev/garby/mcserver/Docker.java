@@ -22,16 +22,12 @@ package dev.garby.mcserver;
 import com.github.dockerjava.api.DockerClient;
 import com.github.dockerjava.api.async.ResultCallback;
 import com.github.dockerjava.api.command.AttachContainerCmd;
-import com.github.dockerjava.api.command.CreateContainerResponse;
 import com.github.dockerjava.api.exception.NotFoundException;
 import com.github.dockerjava.api.model.*;
 import com.github.dockerjava.core.DefaultDockerClientConfig;
 import com.github.dockerjava.core.DockerClientImpl;
-import com.github.dockerjava.core.command.AttachContainerResultCallback;
 import com.github.dockerjava.httpclient5.ApacheDockerHttpClient;
 import com.github.dockerjava.transport.DockerHttpClient;
-import org.apache.commons.codec.binary.Hex;
-import org.apache.commons.io.input.ReaderInputStream;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -39,11 +35,7 @@ import java.io.*;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.nio.charset.StandardCharsets;
-import java.util.Arrays;
-import java.util.Base64;
-import java.util.Scanner;
 import java.util.concurrent.CountDownLatch;
-import java.util.function.Consumer;
 
 public class Docker {
     private static final Logger logger = LoggerFactory.getLogger(Docker.class);
@@ -98,8 +90,7 @@ public class Docker {
                 }
 
                 @Override
-                public void close() throws IOException {
-
+                public void close() {
 
                 }
             })

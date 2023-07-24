@@ -17,14 +17,11 @@
 
 package dev.garby.mcserver;
 
-import org.apache.hc.client5.http.impl.routing.SystemDefaultRoutePlanner;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.net.URISyntaxException;
-import java.util.Arrays;
 
 public class Main {
     private static final Logger logger = LoggerFactory.getLogger(Main.class);
@@ -33,7 +30,7 @@ public class Main {
     // create network
     //start container
 
-    public static void main(String[] args) throws URISyntaxException, InterruptedException, IOException {
+    public static void main(String[] args) throws URISyntaxException, InterruptedException {
         logger.info("Starting...");
         logger.debug("Debugging Enabled");
         Docker docker = new Docker();
