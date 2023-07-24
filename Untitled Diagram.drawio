@@ -109,7 +109,7 @@
         <mxCell id="jAPLUlPSK57keKP8yap--89" value="Start Server" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="jAPLUlPSK57keKP8yap--21">
           <mxGeometry x="43" y="620" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="jAPLUlPSK57keKP8yap--91" value="Start docker container" style="whiteSpace=wrap;html=1;" vertex="1" parent="jAPLUlPSK57keKP8yap--21">
+        <mxCell id="jAPLUlPSK57keKP8yap--91" value="Start dockerManager container" style="whiteSpace=wrap;html=1;" vertex="1" parent="jAPLUlPSK57keKP8yap--21">
           <mxGeometry x="240" y="630" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="jAPLUlPSK57keKP8yap--94" value="Start Shutdown Timer" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="jAPLUlPSK57keKP8yap--21">
