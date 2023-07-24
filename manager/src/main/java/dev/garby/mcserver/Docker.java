@@ -37,6 +37,7 @@ import java.net.URISyntaxException;
 import java.nio.charset.StandardCharsets;
 import java.util.concurrent.CountDownLatch;
 
+@SuppressWarnings("unused")
 public class Docker {
     private static final Logger logger = LoggerFactory.getLogger(Docker.class);
 
@@ -96,8 +97,6 @@ public class Docker {
             })
             ;
         }
-
-
 
 
         latch.await();

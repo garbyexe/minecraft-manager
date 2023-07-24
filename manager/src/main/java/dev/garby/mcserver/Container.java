@@ -35,6 +35,7 @@ import org.slf4j.LoggerFactory;
 import java.io.*;
 
 
+@SuppressWarnings("unused")
 public class Container {
     private static final Logger logger = LoggerFactory.getLogger(Container.class);
     private final DockerClient client;
