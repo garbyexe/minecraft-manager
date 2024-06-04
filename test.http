@@ -1,5 +1,0 @@
-### DELEATE request
-DELETE {{host}}/stop/test_survival
-
-### POST
-POST {{host}}/start/test_survival
