@@ -1,0 +1,237 @@
+package dev.garby;
+
+import spark.Spark;
+
+import java.io.*;
+import java.util.*;
+
+
+public class Api {
+
+    public Map<String, Process> processes = new HashMap<String, Process>();
+
+
+    /**
+     * Starts the API
+     *
+     * @param servers List of available servers
+     */
+    public void start(String[] servers) {
+        System.out.println("Starting API");
+
+
+        Spark.post("/api/start/:server", (req, res) -> {
+
+            String server = req.params("server");
+
+            if (!Arrays.asList(servers).contains(server)) {
+                return Spark.halt(400, "Server Not Found: " + Arrays.toString(servers) + " NOT " + server);
+
+            }
+            if (processes.containsKey(server)) {
+                return Spark.halt(400, "Server is already started or starting");
+            }
+
+            String dataFolder = System.getProperty("user.dir");
+
+            // path to folder with instance to start
+            String startPath = dataFolder + "/" + server;
+            // command to run
+            String[] startCMD = new String[]{"bash", startPath + "/start.sh"};
+
+            // start the server
+           System.out.printf("______Starting %s______\n", server);
+            ProcessBuilder builder = new ProcessBuilder(startCMD);
+            builder.directory(new File(startPath));
+            Process process = builder.start();
+
+
+
+            // get output of command
+            InputStream stdout = process.getInputStream();
+            Scanner scanner = new Scanner(stdout);
+
+            List<String> lines = new ArrayList<>();
+            // check for completion / error, log lines
+            while (scanner.hasNextLine()) {
+
+                String line = scanner.nextLine();
+               System.out.println(line);
+                lines.add(line);
+                // success
+                if (line.contains(")! For help, type \"help\"")) {
+                   System.out.printf("______DONE: Server %s Started______\n", server);
+                    scanner.close();
+
+                    processes.put(server, process);
+
+                   System.out.println("Server started:"+ (processes.get(server) == null));
+                    return Spark.halt(200, String.join("<br>", lines));
+                    // error
+                } else if (line.contains("Failed")) {
+                    process.destroyForcibly();
+                    break;
+                }
+
+            }
+            process.destroyForcibly();
+            scanner.close();
+            System.out.println("Server failed to start");
+            return Spark.halt(500, String.join("<br>", lines));
+        });
+
+
+        Spark.delete("/api/stop/:server", (req, res) -> {
+            //TODO: make this work
+            String server = req.params("server");
+            if (server.equalsIgnoreCase("all")) {
+                if (processes.isEmpty()) {
+                    shutdown();
+                    return Spark.halt(200,"Server Closed");
+                }
+
+                processes.forEach((k, v) -> {
+                    try {
+                        int status = softStop(k);
+                        if (status != 200) Spark.halt(status);
+                    } catch (InterruptedException e) {
+                        throw new RuntimeException(e);
+                    }
+                });
+
+            } else if (!processes.containsKey(server)) {
+                Spark.halt(400, "Server Not Started");
+            } else {
+                if(softStop(server)!=200 ) Spark.halt(500,"Soft Stop Failed");
+                else return Spark.halt(200,"Server Stopped");
+            }
+            if (processes.isEmpty()) {
+                shutdown();
+
+            }
+           System.out.println("Error stopping servers");
+
+            return Spark.halt(500);
+
+
+        });
+        Spark.post("/api/command/:server", (req, res) -> {
+            String server = req.params("server");
+            String command = req.body();
+            if (!Arrays.asList(servers).contains(server)) {
+                return Spark.halt(400, "Server Not Found: " + Arrays.toString(servers) + " NOT " + server);
+            }
+            if (command == null || command.isBlank()) {
+                return Spark.halt(400, "No Command Provided");
+            }
+            if (!processes.containsKey(server)) {
+                return Spark.halt(400, "Server Not Started");
+            }
+            return sendCommand(server, command);
+
+        });
+
+        Spark.post("/api/keep", (req, res) -> {
+           System.out.println("-------Keeping server online-------");
+//            Mcserver.stopDelay();
+//            Mcserver.startDelay();
+            return 200;
+
+        });
+
+        Spark.get("/api/ping", (req, res) -> "pong");
+
+
+//        Spark.get("/api/status",(req,res) -> status() );
+
+
+    }
+
+    /**
+     * stop a server
+     *
+     * @param server The server to stop
+     * @return A Made up a http status code
+     * @throws InterruptedException when waiting for server to close is interrupted
+     */
+    protected int softStop(String server) throws InterruptedException {
+        //TODO: make this work
+       System.out.printf("Stopping Server %s\n", server);
+
+        Process process = processes.get(server);
+        if (process == null) {
+           System.out.printf("ERROR: Server %s Is Null\n", server);
+            return 400;
+        }
+        process.destroy();
+        process.waitFor();
+        if (!process.isAlive()) {
+           System.out.printf("DONE: Server %s Stopped\n", server);
+            processes.remove(server);
+            return 200;
+        } else {
+            //This should never happen
+           System.out.printf("ERROR: Server %s Failed to Stop, killing\n", server);
+            process.destroyForcibly();
+            processes.remove(server);
+            return 500;
+        }
+        //sadly no logs any more from the shutdown sequence
+    }
+
+    private void shutdown() {
+        try {
+            Runtime.getRuntime().exec("shutdown -h now");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    private int sendCommand(String server, String command) {
+        System.out.printf("Sending Command %s to %s\n", command, server);
+        Process process = processes.get(server);
+        if (process == null) {
+            System.out.printf("ERROR: Server %s Is Null\n", server);
+            return 500;
+        }
+        if (!process.isAlive()) {
+            System.out.printf("ERROR: Server %s Is Dead\n", server);
+            return 500;
+        }
+        try (OutputStream stdin = process.getOutputStream(); BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(stdin))) {
+
+            writer.write(command);
+            writer.flush();
+            return 200;
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+
+//
+//    /**
+//     * Removes the process if its no longer alive
+//     *
+//     * @param server  server to remove
+//     * @param process server to remove
+//     * @param kill    if the process is alive, kill it first or return 0
+//     * @return 200 on completion, else 0
+//     */
+//    private int removeIfDead(String server, Process process, Boolean kill) {
+//
+//        if (process != null && process.isAlive()) {
+//            if (kill) {
+//               System.out.println("Force closing process");
+//                process.destroy();
+//            } else {
+//                return 0;
+//            }
+//        }
+//       System.out.printf("______DONE: Stopped %s______", server));
+//
+//        processes.remove(server);
+//        return 200;
+//    }
+}

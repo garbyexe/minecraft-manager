@@ -1,0 +1,1314 @@
+Subject: [PATCH] It workey workey
+---
+Index: .gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+--- /dev/null	(revision 8f0183b65d7535f0e9802a214992460da361d54f)
++++ b/.gitignore	(revision 8f0183b65d7535f0e9802a214992460da361d54f)
+@@ -0,0 +1,38 @@
++target/
++!.mvn/wrapper/maven-wrapper.jar
++!**/src/main/**/target/
++!**/src/test/**/target/
++
++### IntelliJ IDEA ###
++.idea/modules.xml
++.idea/jarRepositories.xml
++.idea/compiler.xml
++.idea/libraries/
++*.iws
++*.iml
++*.ipr
++
++### Eclipse ###
++.apt_generated
++.classpath
++.factorypath
++.project
++.settings
++.springBeans
++.sts4-cache
++
++### NetBeans ###
++/nbproject/private/
++/nbbuild/
++/dist/
++/nbdist/
++/.nb-gradle/
++build/
++!**/src/main/**/build/
++!**/src/test/**/build/
++
++### VS Code ###
++.vscode/
++
++### Mac OS ###
++.DS_Store
+\ No newline at end of file
+Index: .idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+new file mode 100644
+--- /dev/null	(revision 8f0183b65d7535f0e9802a214992460da361d54f)
++++ b/.idea/.gitignore	(revision 8f0183b65d7535f0e9802a214992460da361d54f)
+@@ -0,0 +1,8 @@
++# Default ignored files
++/shelf/
++/workspace.xml
++# Editor-based HTTP Client requests
++/httpRequests/
++# Datasource local storage ignored files
++/dataSources/
++/dataSources.local.xml
+Index: .idea/dataSources.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/dataSources.xml b/.idea/dataSources.xml
+new file mode 100644
+--- /dev/null	(revision 8f0183b65d7535f0e9802a214992460da361d54f)
++++ b/.idea/dataSources.xml	(revision 8f0183b65d7535f0e9802a214992460da361d54f)
+@@ -0,0 +1,15 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
++    <data-source source="LOCAL" name="px-x-0102020000_104.px" uuid="a0abc29e-4df6-4174-be46-8ebc0e57ea7f">
++      <driver-ref>sqlite.xerial</driver-ref>
++      <synchronize>true</synchronize>
++      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
++      <jdbc-url>jdbc:sqlite:$USER_HOME$/Downloads/px-x-0102020000_104.px</jdbc-url>
++      <jdbc-additional-properties>
++        <property name="com.intellij.clouds.kubernetes.db.enabled" value="false" />
++      </jdbc-additional-properties>
++      <working-dir>$ProjectFileDir$</working-dir>
++    </data-source>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/encodings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/encodings.xml b/.idea/encodings.xml
+new file mode 100644
+--- /dev/null	(revision 8f0183b65d7535f0e9802a214992460da361d54f)
++++ b/.idea/encodings.xml	(revision 8f0183b65d7535f0e9802a214992460da361d54f)
+@@ -0,0 +1,7 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="Encoding">
++    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
++    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/inspectionProfiles/Project_Default.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/inspectionProfiles/Project_Default.xml b/.idea/inspectionProfiles/Project_Default.xml
+new file mode 100644
+--- /dev/null	(revision 8f0183b65d7535f0e9802a214992460da361d54f)
++++ b/.idea/inspectionProfiles/Project_Default.xml	(revision 8f0183b65d7535f0e9802a214992460da361d54f)
+@@ -0,0 +1,8 @@
++<component name="InspectionProjectProfileManager">
++  <profile version="1.0">
++    <option name="myName" value="Project Default" />
++    <inspection_tool class="AutoCloseableResource" enabled="true" level="WARNING" enabled_by_default="true">
++      <option name="METHOD_MATCHER_CONFIG" value="java.util.Formatter,format,java.io.Writer,append,com.google.common.base.Preconditions,checkNotNull,org.hibernate.Session,close,java.io.PrintWriter,printf,java.io.PrintStream,printf,java.lang.Class,getResourceAsStream" />
++    </inspection_tool>
++  </profile>
++</component>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+new file mode 100644
+--- /dev/null	(revision 8f0183b65d7535f0e9802a214992460da361d54f)
++++ b/.idea/misc.xml	(revision 8f0183b65d7535f0e9802a214992460da361d54f)
+@@ -0,0 +1,15 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ExternalStorageConfigurationManager" enabled="true" />
++  <component name="MavenProjectsManager">
++    <option name="originalFiles">
++      <list>
++        <option value="$PROJECT_DIR$/pom.xml" />
++      </list>
++    </option>
++    <option name="workspaceImportForciblyTurnedOn" value="true" />
++  </component>
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17 (3)" project-jdk-type="JavaSDK">
++    <output url="file://$PROJECT_DIR$/out" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/uiDesigner.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/uiDesigner.xml b/.idea/uiDesigner.xml
+new file mode 100644
+--- /dev/null	(revision 8f0183b65d7535f0e9802a214992460da361d54f)
++++ b/.idea/uiDesigner.xml	(revision 8f0183b65d7535f0e9802a214992460da361d54f)
+@@ -0,0 +1,124 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="Palette2">
++    <group name="Swing">
++      <item class="com.intellij.uiDesigner.HSpacer" tooltip-text="Horizontal Spacer" icon="/com/intellij/uiDesigner/icons/hspacer.svg" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="1" hsize-policy="6" anchor="0" fill="1" />
++      </item>
++      <item class="com.intellij.uiDesigner.VSpacer" tooltip-text="Vertical Spacer" icon="/com/intellij/uiDesigner/icons/vspacer.svg" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="6" hsize-policy="1" anchor="0" fill="2" />
++      </item>
++      <item class="javax.swing.JPanel" icon="/com/intellij/uiDesigner/icons/panel.svg" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3" />
++      </item>
++      <item class="javax.swing.JScrollPane" icon="/com/intellij/uiDesigner/icons/scrollPane.svg" removable="false" auto-create-binding="false" can-attach-label="true">
++        <default-constraints vsize-policy="7" hsize-policy="7" anchor="0" fill="3" />
++      </item>
++      <item class="javax.swing.JButton" icon="/com/intellij/uiDesigner/icons/button.svg" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="3" anchor="0" fill="1" />
++        <initial-values>
++          <property name="text" value="Button" />
++        </initial-values>
++      </item>
++      <item class="javax.swing.JRadioButton" icon="/com/intellij/uiDesigner/icons/radioButton.svg" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="3" anchor="8" fill="0" />
++        <initial-values>
++          <property name="text" value="RadioButton" />
++        </initial-values>
++      </item>
++      <item class="javax.swing.JCheckBox" icon="/com/intellij/uiDesigner/icons/checkBox.svg" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="3" anchor="8" fill="0" />
++        <initial-values>
++          <property name="text" value="CheckBox" />
++        </initial-values>
++      </item>
++      <item class="javax.swing.JLabel" icon="/com/intellij/uiDesigner/icons/label.svg" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="0" anchor="8" fill="0" />
++        <initial-values>
++          <property name="text" value="Label" />
++        </initial-values>
++      </item>
++      <item class="javax.swing.JTextField" icon="/com/intellij/uiDesigner/icons/textField.svg" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
++          <preferred-size width="150" height="-1" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JPasswordField" icon="/com/intellij/uiDesigner/icons/passwordField.svg" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
++          <preferred-size width="150" height="-1" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JFormattedTextField" icon="/com/intellij/uiDesigner/icons/formattedTextField.svg" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
++          <preferred-size width="150" height="-1" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JTextArea" icon="/com/intellij/uiDesigner/icons/textArea.svg" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
++          <preferred-size width="150" height="50" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JTextPane" icon="/com/intellij/uiDesigner/icons/textPane.svg" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
++          <preferred-size width="150" height="50" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JEditorPane" icon="/com/intellij/uiDesigner/icons/editorPane.svg" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
++          <preferred-size width="150" height="50" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JComboBox" icon="/com/intellij/uiDesigner/icons/comboBox.svg" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="0" hsize-policy="2" anchor="8" fill="1" />
++      </item>
++      <item class="javax.swing.JTable" icon="/com/intellij/uiDesigner/icons/table.svg" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
++          <preferred-size width="150" height="50" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JList" icon="/com/intellij/uiDesigner/icons/list.svg" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="6" hsize-policy="2" anchor="0" fill="3">
++          <preferred-size width="150" height="50" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JTree" icon="/com/intellij/uiDesigner/icons/tree.svg" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
++          <preferred-size width="150" height="50" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JTabbedPane" icon="/com/intellij/uiDesigner/icons/tabbedPane.svg" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3">
++          <preferred-size width="200" height="200" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JSplitPane" icon="/com/intellij/uiDesigner/icons/splitPane.svg" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3">
++          <preferred-size width="200" height="200" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JSpinner" icon="/com/intellij/uiDesigner/icons/spinner.svg" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1" />
++      </item>
++      <item class="javax.swing.JSlider" icon="/com/intellij/uiDesigner/icons/slider.svg" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1" />
++      </item>
++      <item class="javax.swing.JSeparator" icon="/com/intellij/uiDesigner/icons/separator.svg" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3" />
++      </item>
++      <item class="javax.swing.JProgressBar" icon="/com/intellij/uiDesigner/icons/progressbar.svg" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="0" fill="1" />
++      </item>
++      <item class="javax.swing.JToolBar" icon="/com/intellij/uiDesigner/icons/toolbar.svg" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="0" fill="1">
++          <preferred-size width="-1" height="20" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JToolBar$Separator" icon="/com/intellij/uiDesigner/icons/toolbarSeparator.svg" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="0" anchor="0" fill="1" />
++      </item>
++      <item class="javax.swing.JScrollBar" icon="/com/intellij/uiDesigner/icons/scrollbar.svg" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="6" hsize-policy="0" anchor="0" fill="2" />
++      </item>
++    </group>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	(revision 8f0183b65d7535f0e9802a214992460da361d54f)
++++ b/.idea/vcs.xml	(revision 8f0183b65d7535f0e9802a214992460da361d54f)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/pom.xml b/pom.xml
+new file mode 100644
+--- /dev/null	(revision 8f0183b65d7535f0e9802a214992460da361d54f)
++++ b/pom.xml	(revision 8f0183b65d7535f0e9802a214992460da361d54f)
+@@ -0,0 +1,75 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project xmlns="http://maven.apache.org/POM/4.0.0"
++         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
++         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
++    <modelVersion>4.0.0</modelVersion>
++
++    <groupId>dev.garby</groupId>
++    <artifactId>mcmanager-dirty</artifactId>
++    <version>1.0-SNAPSHOT</version>
++
++    <properties>
++        <maven.compiler.source>17</maven.compiler.source>
++        <maven.compiler.target>17</maven.compiler.target>
++        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
++    </properties>
++    <build>
++        <plugins>
++            <plugin>
++                <groupId>org.apache.maven.plugins</groupId>
++                <artifactId>maven-shade-plugin</artifactId>
++                <executions>
++                    <execution>
++                        <goals>
++                            <goal>shade</goal>
++                        </goals>
++                        <configuration>
++                            <createDependencyReducedPom>false</createDependencyReducedPom>
++                            <shadedArtifactAttached>false</shadedArtifactAttached>
++                            <transformers>
++                                <transformer implementation=
++                                                     "org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
++                                    <mainClass>dev.garby.Main</mainClass>
++                                </transformer>
++                            </transformers>
++                        </configuration>
++                    </execution>
++                </executions>
++            </plugin>
++        </plugins>
++    </build>
++    <dependencies>
++        <dependency>
++            <groupId>com.sparkjava</groupId>
++            <artifactId>spark-core</artifactId>
++            <version>2.9.4</version>
++        </dependency>
++        <dependency>
++            <groupId>ch.qos.logback</groupId>
++            <artifactId>logback-classic</artifactId>
++            <version>1.4.14</version>
++        </dependency>
++        <dependency>
++            <groupId>ch.qos.logback</groupId>
++            <artifactId>logback-core</artifactId>
++            <version>1.4.14</version>
++        </dependency>
++        <dependency>
++            <groupId>org.slf4j</groupId>
++            <artifactId>slf4j-api</artifactId>
++            <version>2.0.7</version>
++        </dependency>
++        <dependency>
++            <groupId>org.snakeyaml</groupId>
++            <artifactId>snakeyaml-engine</artifactId>
++            <version>2.7</version>
++        </dependency>
++        <dependency>
++            <groupId>org.junit.jupiter</groupId>
++            <artifactId>junit-jupiter</artifactId>
++            <version>RELEASE</version>
++            <scope>test</scope>
++        </dependency>
++    </dependencies>
++
++</project>
+\ No newline at end of file
+Index: src/main/java/dev/garby/Api.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/dev/garby/Api.java b/src/main/java/dev/garby/Api.java
+new file mode 100644
+--- /dev/null	(revision 8f0183b65d7535f0e9802a214992460da361d54f)
++++ b/src/main/java/dev/garby/Api.java	(revision 8f0183b65d7535f0e9802a214992460da361d54f)
+@@ -0,0 +1,100 @@
++package dev.garby;
++
++import org.slf4j.Logger;
++import org.slf4j.LoggerFactory;
++import spark.Spark;
++
++import java.io.Closeable;
++import java.io.File;
++import java.io.IOException;
++import java.util.Arrays;
++import java.util.HashMap;
++import java.util.Map;
++
++public class Api implements Closeable, AutoCloseable {
++    private static final Logger logger = LoggerFactory.getLogger(Api.class);
++
++    Map<String, McServer> servers = new HashMap<String, McServer>();
++    String[] serverNames;
++
++    File serversDirectory;
++
++    public Api(File serversDirectory, String... serverNames) {
++        this.serversDirectory = serversDirectory;
++        this.serverNames = serverNames;
++    }
++
++    /**
++     * Starts the API
++     */
++    public void init() {
++        logger.debug("Starting API");
++        Spark.before((req, res) -> {
++            String server = req.params("server");
++            logger.debug("{} {}", req.requestMethod(), req.pathInfo());
++            if (!serverIsValid(server)) {
++                Spark.halt(404, "Server Not Found");
++            }
++
++            if (!req.pathInfo().contains("start")) {
++                if (!serverProcessExists(server)) {
++                    Spark.halt(400, "Server is not started");
++                }
++            }
++
++
++        });
++
++        Spark.post("/api/start/:server", (req, res) -> {
++            String server = req.params("server");
++
++            McServer mcServer = new McServer(server, new File(serversDirectory + "/" + server));
++            mcServer.createProcess();
++
++
++            McServer.Status resultStatus = mcServer.awaitStart();
++            if (resultStatus == McServer.Status.SUCCESS) {
++                servers.put(server, mcServer);
++                return "Server started";
++            } else {
++                return Spark.halt(500, "Server failed to start");
++            }
++
++        });
++        Spark.delete("/api/stop/:server", (req, res) -> {
++            String server = req.params("server");
++            McServer mcServer = servers.get(server);
++            if (mcServer.stop().equals(McServer.Status.SUCCESS)) {
++                servers.remove(server);
++                return "Server stopped";
++            } else {
++                return Spark.halt(500, "Server failed to stop");
++            }
++
++        });
++        Spark.post("/api/command:server", (req, res) -> {
++            String server = req.params("server");
++            McServer mcServer = servers.get(server);
++            String command = req.queryParams("command");
++            if(mcServer.runCommand(command).equals(McServer.Status.SUCCESS)) {
++                return "Command sent";
++            } else {
++                return Spark.halt(500, "Command failed");
++            }
++        });
++        Spark.get("/api/ping", (req, res) -> "pong");
++
++    }
++    public boolean serverIsValid(String server) {
++        return Arrays.asList(serverNames).contains(server);
++    }
++    public boolean serverProcessExists(String server) {
++        return servers.containsKey(server);
++    }
++
++    @Override
++    public void close() throws IOException {
++        Spark.stop();
++
++    }
++}
+Index: src/main/java/dev/garby/Api.java.old
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/dev/garby/Api.java.old b/src/main/java/dev/garby/Api.java.old
+new file mode 100644
+--- /dev/null	(revision 8f0183b65d7535f0e9802a214992460da361d54f)
++++ b/src/main/java/dev/garby/Api.java.old	(revision 8f0183b65d7535f0e9802a214992460da361d54f)
+@@ -0,0 +1,237 @@
++package dev.garby;
++
++import spark.Spark;
++
++import java.io.*;
++import java.util.*;
++
++
++public class Api {
++
++    public Map<String, Process> processes = new HashMap<String, Process>();
++
++
++    /**
++     * Starts the API
++     *
++     * @param servers List of available servers
++     */
++    public void start(String[] servers) {
++        System.out.println("Starting API");
++
++
++        Spark.post("/api/start/:server", (req, res) -> {
++
++            String server = req.params("server");
++
++            if (!Arrays.asList(servers).contains(server)) {
++                return Spark.halt(400, "Server Not Found: " + Arrays.toString(servers) + " NOT " + server);
++
++            }
++            if (processes.containsKey(server)) {
++                return Spark.halt(400, "Server is already started or starting");
++            }
++
++            String dataFolder = System.getProperty("user.dir");
++
++            // path to folder with instance to start
++            String startPath = dataFolder + "/" + server;
++            // command to run
++            String[] startCMD = new String[]{"bash", startPath + "/start.sh"};
++
++            // start the server
++           System.out.printf("______Starting %s______\n", server);
++            ProcessBuilder builder = new ProcessBuilder(startCMD);
++            builder.directory(new File(startPath));
++            Process process = builder.start();
++
++
++
++            // get output of command
++            InputStream stdout = process.getInputStream();
++            Scanner scanner = new Scanner(stdout);
++
++            List<String> lines = new ArrayList<>();
++            // check for completion / error, log lines
++            while (scanner.hasNextLine()) {
++
++                String line = scanner.nextLine();
++               System.out.println(line);
++                lines.add(line);
++                // success
++                if (line.contains(")! For help, type \"help\"")) {
++                   System.out.printf("______DONE: Server %s Started______\n", server);
++                    scanner.close();
++
++                    processes.put(server, process);
++
++                   System.out.println("Server started:"+ (processes.get(server) == null));
++                    return Spark.halt(200, String.join("<br>", lines));
++                    // error
++                } else if (line.contains("Failed")) {
++                    process.destroyForcibly();
++                    break;
++                }
++
++            }
++            process.destroyForcibly();
++            scanner.close();
++            System.out.println("Server failed to start");
++            return Spark.halt(500, String.join("<br>", lines));
++        });
++
++
++        Spark.delete("/api/stop/:server", (req, res) -> {
++            //TODO: make this work
++            String server = req.params("server");
++            if (server.equalsIgnoreCase("all")) {
++                if (processes.isEmpty()) {
++                    shutdown();
++                    return Spark.halt(200,"Server Closed");
++                }
++
++                processes.forEach((k, v) -> {
++                    try {
++                        int status = softStop(k);
++                        if (status != 200) Spark.halt(status);
++                    } catch (InterruptedException e) {
++                        throw new RuntimeException(e);
++                    }
++                });
++
++            } else if (!processes.containsKey(server)) {
++                Spark.halt(400, "Server Not Started");
++            } else {
++                if(softStop(server)!=200 ) Spark.halt(500,"Soft Stop Failed");
++                else return Spark.halt(200,"Server Stopped");
++            }
++            if (processes.isEmpty()) {
++                shutdown();
++
++            }
++           System.out.println("Error stopping servers");
++
++            return Spark.halt(500);
++
++
++        });
++        Spark.post("/api/command/:server", (req, res) -> {
++            String server = req.params("server");
++            String command = req.body();
++            if (!Arrays.asList(servers).contains(server)) {
++                return Spark.halt(400, "Server Not Found: " + Arrays.toString(servers) + " NOT " + server);
++            }
++            if (command == null || command.isBlank()) {
++                return Spark.halt(400, "No Command Provided");
++            }
++            if (!processes.containsKey(server)) {
++                return Spark.halt(400, "Server Not Started");
++            }
++            return sendCommand(server, command);
++
++        });
++
++        Spark.post("/api/keep", (req, res) -> {
++           System.out.println("-------Keeping server online-------");
++//            Mcserver.stopDelay();
++//            Mcserver.startDelay();
++            return 200;
++
++        });
++
++        Spark.get("/api/ping", (req, res) -> "pong");
++
++
++//        Spark.get("/api/status",(req,res) -> status() );
++
++
++    }
++
++    /**
++     * stop a server
++     *
++     * @param server The server to stop
++     * @return A Made up a http status code
++     * @throws InterruptedException when waiting for server to close is interrupted
++     */
++    protected int softStop(String server) throws InterruptedException {
++        //TODO: make this work
++       System.out.printf("Stopping Server %s\n", server);
++
++        Process process = processes.get(server);
++        if (process == null) {
++           System.out.printf("ERROR: Server %s Is Null\n", server);
++            return 400;
++        }
++        process.destroy();
++        process.waitFor();
++        if (!process.isAlive()) {
++           System.out.printf("DONE: Server %s Stopped\n", server);
++            processes.remove(server);
++            return 200;
++        } else {
++            //This should never happen
++           System.out.printf("ERROR: Server %s Failed to Stop, killing\n", server);
++            process.destroyForcibly();
++            processes.remove(server);
++            return 500;
++        }
++        //sadly no logs any more from the shutdown sequence
++    }
++
++    private void shutdown() {
++        try {
++            Runtime.getRuntime().exec("shutdown -h now");
++        } catch (IOException e) {
++            throw new RuntimeException(e);
++        }
++    }
++    private int sendCommand(String server, String command) {
++        System.out.printf("Sending Command %s to %s\n", command, server);
++        Process process = processes.get(server);
++        if (process == null) {
++            System.out.printf("ERROR: Server %s Is Null\n", server);
++            return 500;
++        }
++        if (!process.isAlive()) {
++            System.out.printf("ERROR: Server %s Is Dead\n", server);
++            return 500;
++        }
++        try (OutputStream stdin = process.getOutputStream(); BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(stdin))) {
++
++            writer.write(command);
++            writer.flush();
++            return 200;
++
++        } catch (IOException e) {
++            throw new RuntimeException(e);
++        }
++
++    }
++
++
++//
++//    /**
++//     * Removes the process if its no longer alive
++//     *
++//     * @param server  server to remove
++//     * @param process server to remove
++//     * @param kill    if the process is alive, kill it first or return 0
++//     * @return 200 on completion, else 0
++//     */
++//    private int removeIfDead(String server, Process process, Boolean kill) {
++//
++//        if (process != null && process.isAlive()) {
++//            if (kill) {
++//               System.out.println("Force closing process");
++//                process.destroy();
++//            } else {
++//                return 0;
++//            }
++//        }
++//       System.out.printf("______DONE: Stopped %s______", server));
++//
++//        processes.remove(server);
++//        return 200;
++//    }
++}
+Index: src/main/java/dev/garby/Constants.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/dev/garby/Constants.java b/src/main/java/dev/garby/Constants.java
+new file mode 100644
+--- /dev/null	(revision 8f0183b65d7535f0e9802a214992460da361d54f)
++++ b/src/main/java/dev/garby/Constants.java	(revision 8f0183b65d7535f0e9802a214992460da361d54f)
+@@ -0,0 +1,8 @@
++package dev.garby;
++
++public class Constants {
++    public final static String EXECUTABLE = "start.sh";
++    public final static String EXECUTABLE_RUNNER = "bash";
++    public final static String STARTUP_COMPLETE_CHECK= ")! For help, type \"help\"";
++    public final static String STARTUP_FAILED_CHECK = "Failed";
++}
+Index: src/main/java/dev/garby/Delay.java.old
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/dev/garby/Delay.java.old b/src/main/java/dev/garby/Delay.java.old
+new file mode 100644
+--- /dev/null	(revision 8f0183b65d7535f0e9802a214992460da361d54f)
++++ b/src/main/java/dev/garby/Delay.java.old	(revision 8f0183b65d7535f0e9802a214992460da361d54f)
+@@ -0,0 +1,35 @@
++package dev.garby;
++
++import java.util.Timer;
++import java.util.TimerTask;
++
++public abstract class Delay implements Runnable{
++    TimerTask task;
++    Timer timer;
++
++    private static final long STOP_MINUTES = 5;
++
++
++    public Delay () {
++
++        task = new TimerTask() {
++            public void run() {
++            run();
++        }
++        };
++        timer = new Timer("Delay");
++    }
++
++
++
++    @Override
++    public abstract void run();
++
++    void start() {
++       timer.schedule(task, STOP_MINUTES);
++    }
++    Timer timer = new Timer("Timer");
++
++    long delay = 1000L;
++    timer.schedule(task, delay);
++}
+Index: src/main/java/dev/garby/HostManager.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/dev/garby/HostManager.java b/src/main/java/dev/garby/HostManager.java
+new file mode 100644
+--- /dev/null	(revision 8f0183b65d7535f0e9802a214992460da361d54f)
++++ b/src/main/java/dev/garby/HostManager.java	(revision 8f0183b65d7535f0e9802a214992460da361d54f)
+@@ -0,0 +1,7 @@
++package dev.garby;
++
++public class HostManager {
++
++
++
++}
+Index: src/main/java/dev/garby/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/dev/garby/Main.java b/src/main/java/dev/garby/Main.java
+new file mode 100644
+--- /dev/null	(revision 8f0183b65d7535f0e9802a214992460da361d54f)
++++ b/src/main/java/dev/garby/Main.java	(revision 8f0183b65d7535f0e9802a214992460da361d54f)
+@@ -0,0 +1,133 @@
++package dev.garby;
++
++import org.slf4j.Logger;
++import org.slf4j.LoggerFactory;
++
++import java.io.File;
++import java.io.IOException;
++import java.io.InputStream;
++import java.io.UncheckedIOException;
++import java.net.URISyntaxException;
++import java.nio.file.Files;
++import java.nio.file.NoSuchFileException;
++import java.nio.file.Path;
++import java.util.Arrays;
++import java.util.Properties;
++
++
++public class Main {
++    static Logger logger = LoggerFactory.getLogger(Main.class);
++    protected static String CONFIG_URL;
++    protected static String[] SERVER_LIST;
++    protected static File WORKING_DIRECTORY = new File(System.getProperty("user.dir"));
++
++    public static void main(String... args) {
++
++        Main main = new Main();
++        logger.debug(Arrays.toString(args));
++        if (Arrays.toString(args).contains("--extract")) {
++            logger.info("Extracting resources");
++            main.extractResources();
++        }
++
++        logger.info("Loading config");
++
++        main.getConfigPath();
++        main.readConfig();
++
++
++        logger.debug("Startup");
++        try (Api api = new Api(new File(System.getProperty("user.dir")), SERVER_LIST)) {
++            api.init();
++        } catch (IOException e) {
++            logger.error("Failed to start API", e);
++        }
++
++    }
++
++    @SuppressWarnings("ConstantConditions")
++    private void extractResources() {
++        try {
++
++            for (String resource : Path.of(Main.class.getResource("/resources").toURI()).toFile().list()) {
++                extractResource(resource);
++            }
++
++            extractResource("");
++        } catch (IOException | URISyntaxException e) {
++            logger.error("Failed to extract", e);
++            System.exit(1);
++        }
++        System.exit(0);
++    }
++
++    private void getConfigPath() {
++        logger.debug("Getting config file");
++        CONFIG_URL = System.getProperty("mcManager.configFile");
++        if (CONFIG_URL == null) {
++            CONFIG_URL = System.getenv("MCMANAGER_CONFIG_FILE");
++        }
++        if (CONFIG_URL == null) {
++            CONFIG_URL = "McManager.properties";
++        }
++        logger.debug("Using config file {}", CONFIG_URL);
++    }
++
++    private void readConfig() {
++        Path configFile = Path.of(CONFIG_URL);
++
++        try (InputStream input = Files.newInputStream(configFile)) {
++            Properties prop = new Properties();
++            // load a properties file
++            prop.load(input);
++            // get the property value
++            SERVER_LIST = prop.get("servers").toString().split(",");
++
++            logger.debug("Loaded servers {}", Arrays.toString(SERVER_LIST));
++
++
++        } catch (NoSuchFileException | NullPointerException e) {
++            if (e instanceof NullPointerException) {
++                logger.error("Config file is missing required properties");
++                logger.info("making backup of old config");
++                backupConfig();
++            } else {
++                logger.error("Config file not found");
++            }
++            logger.info("Creating default config");
++            createDefaultConfig();
++            System.exit(1);
++
++        } catch (IOException ex) {
++            throw new UncheckedIOException(ex);
++        }
++    }
++
++    private void backupConfig() {
++        try {
++            Files.move(Path.of(CONFIG_URL), Path.of(CONFIG_URL + ".old"));
++        } catch (IOException e) {
++            logger.error("Failed to make backup of old config");
++            throw new UncheckedIOException(e);
++        }
++    }
++
++    private void createDefaultConfig() {
++        try {
++            extractResource("McManager.properties");
++        } catch (IOException e) {
++            logger.error("Failed to create default config");
++            throw new UncheckedIOException(e);
++        } catch (URISyntaxException | NullPointerException e) {
++            logger.error("Failed to create default config");
++            throw new RuntimeException(e);
++        }
++    }
++
++    @SuppressWarnings("ConstantConditions")
++    private void extractResource(String resource) throws IOException, URISyntaxException, NullPointerException {
++        Files.copy(Main.class.getResourceAsStream("/resources/" + resource), Path.of(WORKING_DIRECTORY + "/" + resource));
++    }
++
++
++}
+\ No newline at end of file
+Index: src/main/java/dev/garby/McServer.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/dev/garby/McServer.java b/src/main/java/dev/garby/McServer.java
+new file mode 100644
+--- /dev/null	(revision 8f0183b65d7535f0e9802a214992460da361d54f)
++++ b/src/main/java/dev/garby/McServer.java	(revision 8f0183b65d7535f0e9802a214992460da361d54f)
+@@ -0,0 +1,208 @@
++package dev.garby;
++
++import org.slf4j.Logger;
++import org.slf4j.LoggerFactory;
++
++import java.io.*;
++import java.util.Scanner;
++
++import static dev.garby.Constants.*;
++
++public class McServer {
++    private static final Logger logger = LoggerFactory.getLogger(McServer.class);
++
++    String name;
++    File path;
++    Process process;
++
++    ServerState currentState = ServerState.UNKNOWN;
++
++    public String getName() {
++        return name;
++    }
++
++    public File getPath() {
++        return path;
++    }
++
++    public Process getProcess() {
++        return process;
++    }
++
++    public ServerState getCurrentState() {
++        return currentState;
++    }
++
++    public void setCurrentState(ServerState currentState) {
++        this.currentState = currentState;
++    }
++
++
++    public McServer(String name, File path) {
++        this.name = name;
++        this.path = path;
++    }
++
++    void createProcess() throws IOException {
++        ProcessBuilder builder = new ProcessBuilder(EXECUTABLE_RUNNER, "./" + EXECUTABLE);
++
++        builder.directory(path);
++        process = builder.start();
++    }
++
++    Status awaitStart() throws IOException {
++        if (!this.isDead() || this.currentState == ServerState.STARTED || this.currentState == ServerState.BOOTING) {
++            logger.error("Trying to start Server {}, but is already started or starting", name);
++            return Status.FAILED;
++        }
++
++        try (InputStream stdout = process.getInputStream()) {
++
++            ServerState StartupEndState = ServerState.UNKNOWN;
++
++            String line;
++
++            try (Scanner scanner = new Scanner(stdout)) {
++                while (scanner.hasNextLine()) {
++                    line = scanner.nextLine();
++                    logger.info("Server Console: {}", line);
++
++                    ServerState lineAction = checkLineAction(line);
++
++                    if (lineAction == ServerState.BOOTING) continue;
++
++                    // server must have started
++                    StartupEndState = lineAction;
++                    break;
++                }
++            }
++            // the server must have started or crashed to get here
++
++            if (StartupEndState == ServerState.STARTED) {
++                logger.info("Server {} started!", name);
++                this.currentState = ServerState.STARTED;
++                return Status.SUCCESS;
++            }
++            this.currentState = ServerState.CRASHED;
++
++            if (StartupEndState == ServerState.UNKNOWN) {
++                // the Scanner didn't find any lines
++                logger.error("Unable to get lines from minecraft server {}. Does the startup script work?", name);
++                return Status.FAILED;
++            } else if (StartupEndState == ServerState.BOOTING) {
++                logger.error("Server {} crashed!, The logs might be useful", name);
++                return Status.FAILED;
++            } else {
++                logger.error("Server {} crashed!, The logs might be useful. This could be a problem with the minecraft server or the server manager", name);
++                return Status.FAILED;
++            }
++
++
++        }
++
++    }
++
++    public Status stop() throws IOException, InterruptedException {
++        if (this.isDead()) return Status.FAILED;
++        try (InputStream stdout = process.getInputStream()) {
++            process.destroy();
++            logger.info("Server {} stopping", name);
++            String line;
++            try (Scanner scanner = new Scanner(stdout)) {
++                while (scanner.hasNextLine()) {
++                    line = scanner.nextLine();
++                    logger.info("Server Console: {}", line);
++                }
++                if (process.waitFor(30, java.util.concurrent.TimeUnit.SECONDS)) {
++                    logger.info("Server {} stopped", name);
++                    this.currentState = ServerState.STOPPED;
++                    return Status.SUCCESS;
++                }
++                logger.error("Server {} failed to stop", name);
++                this.currentState = ServerState.STOPPED;
++                return Status.FAILED;
++
++            }
++
++
++        }
++    }
++
++    public Status kill() throws InterruptedException {
++        process.destroyForcibly();
++        process.waitFor();
++        this.currentState = ServerState.STOPPED;
++        return Status.SUCCESS;
++    }
++
++    public Status runCommand(String command) throws IOException {
++        if (this.isDead()) return Status.FAILED;
++
++        try (
++                OutputStream stdin = process.getOutputStream();
++                BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(stdin))
++        ) {
++            logger.info("Running command '{}' on server {}", name, command);
++            writer.write(command);
++            writer.flush();
++            return Status.SUCCESS;
++
++        }
++    }
++
++    /**
++     * Checks if the server is no longer alive
++     *
++     * @return true if the server is dead
++     */
++    public boolean isDead() {
++        boolean isDead = process == null || !process.isAlive();
++        if (isDead) {
++            logger.warn("Server {}'s process is dead! Server must have stopped", name);
++            logger.debug("Removing server {} from list", name);
++            this.currentState = ServerState.STOPPED;
++            process = null;
++        } else {
++            logger.debug("Server {} is alive", name);
++        }
++        return isDead;
++    }
++
++    /**
++     * Checks if a line shows that the server has started or crashed or is still starting
++     *
++     * @param line Line to check
++     * @return LineAction, action to take
++     */
++    private ServerState checkLineAction(String line) {
++        if (line.contains(STARTUP_COMPLETE_CHECK)) {
++            logger.info("Server {} started!", name);
++            return ServerState.STARTED;
++        } else {
++            return ServerState.BOOTING;
++        }
++    }
++
++
++    /**
++     * Possible states of a server
++     */
++    public enum ServerState {
++        UNKNOWN,
++        BOOTING,
++        STARTED,
++        CRASHED,
++        STOPPED
++    }
++
++    /**
++     * The Returned Status of an action
++     */
++    public enum Status {
++        UNKNOWN,
++        SUCCESS,
++        FAILED
++    }
++
++
++}
+Index: src/main/java/dev/garby/ServersManager.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/dev/garby/ServersManager.java b/src/main/java/dev/garby/ServersManager.java
+new file mode 100644
+--- /dev/null	(revision 8f0183b65d7535f0e9802a214992460da361d54f)
++++ b/src/main/java/dev/garby/ServersManager.java	(revision 8f0183b65d7535f0e9802a214992460da361d54f)
+@@ -0,0 +1,15 @@
++package dev.garby;
++
++import org.slf4j.Logger;
++import org.slf4j.LoggerFactory;
++
++import java.util.HashMap;
++import java.util.Map;
++
++public class ServersManager {
++    private static final Logger logger = LoggerFactory.getLogger(ServersManager.class);
++
++    Map<String, McServer> servers = new HashMap<String, McServer>();
++    String[] serverNames;
++
++}
+Index: src/main/java/dev/garby/Test.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/dev/garby/Test.java b/src/main/java/dev/garby/Test.java
+new file mode 100644
+--- /dev/null	(revision 8f0183b65d7535f0e9802a214992460da361d54f)
++++ b/src/main/java/dev/garby/Test.java	(revision 8f0183b65d7535f0e9802a214992460da361d54f)
+@@ -0,0 +1,5 @@
++package dev.garby;
++
++public class Test {
++
++}
+Index: src/main/resources/logback.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/logback.xml b/src/main/resources/logback.xml
+new file mode 100644
+--- /dev/null	(revision 8f0183b65d7535f0e9802a214992460da361d54f)
++++ b/src/main/resources/logback.xml	(revision 8f0183b65d7535f0e9802a214992460da361d54f)
+@@ -0,0 +1,15 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<configuration>
++    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
++        <encoder>
++            <pattern>%d{HH:mm:ss.SSS} %boldGreen(%-16.-16logger{0}) %highlight(%-6level) %msg%n</pattern>
++        </encoder>
++    </appender>
++
++    <root level="WARN" >
++        <appender-ref ref="STDOUT" />
++    </root>
++    <logger level="TRACE" name="dev.garby" additivity="false">
++        <appender-ref ref="STDOUT"/>
++    </logger>
++</configuration>
+\ No newline at end of file
+Index: src/main/resources/resources/McManager.yaml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/src/main/resources/resources/McManager.yaml b/src/main/resources/resources/McManager.yaml
+new file mode 100644
+--- /dev/null	(revision 8f0183b65d7535f0e9802a214992460da361d54f)
++++ b/src/main/resources/resources/McManager.yaml	(revision 8f0183b65d7535f0e9802a214992460da361d54f)
+@@ -0,0 +1,5 @@
++Server_List:
++  - id: "Server1"
++    type: "minecraft"
++  - id: "Server2"
++    type: "minecraft"
+Index: src/main/resources/resources/hi
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/resources/hi b/src/main/resources/resources/hi
+new file mode 100644
+--- /dev/null	(revision 8f0183b65d7535f0e9802a214992460da361d54f)
++++ b/src/main/resources/resources/hi	(revision 8f0183b65d7535f0e9802a214992460da361d54f)
+@@ -0,0 +1,1 @@
++hello world
+\ No newline at end of file
+Index: src/test/java/dev/garby/test.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/dev/garby/test.java b/src/test/java/dev/garby/test.java
+new file mode 100644
+--- /dev/null	(revision 8f0183b65d7535f0e9802a214992460da361d54f)
++++ b/src/test/java/dev/garby/test.java	(revision 8f0183b65d7535f0e9802a214992460da361d54f)
+@@ -0,0 +1,16 @@
++package dev.garby;
++
++import org.junit.jupiter.api.Test;
++import org.junit.jupiter.api.Assertions;
++
++import java.io.File;
++
++public class test {
++    @Test
++    public void test() {
++        File file = new File(new File(System.getProperty("user.dir")).getAbsolutePath()+ "/resources/config.properties");
++        File file2 = new File(new File(System.getProperty("user.dir"))+ "/resources/config.properties");
++
++        Assertions.assertEquals(new File("resources/config.properties").getAbsolutePath(), file2.getAbsolutePath());
++    }
++}
