@@ -1,0 +1,5 @@
+serverList:
+  - id: "Server1"
+    game: "minecraft"
+  - id: "Server2"
+    game: "minecraft"

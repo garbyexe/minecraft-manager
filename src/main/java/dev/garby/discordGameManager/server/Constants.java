@@ -1,4 +1,4 @@
-package dev.garby;
+package dev.garby.discordGameManager.server;
 
 public class Constants {
     public final static String EXECUTABLE = "start.sh";

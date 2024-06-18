@@ -1,0 +1,7 @@
+serverList:
+  - id: "Server1"
+    start_string: ""
+    game: "minecraft"
+  - id: "Server2"
+    game: "minecraft"
+    start_string: ""

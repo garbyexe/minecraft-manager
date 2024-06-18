@@ -1,5 +1,0 @@
-Server_List:
-  - id: "Server1"
-    type: "minecraft"
-  - id: "Server2"
-    type: "minecraft"

@@ -1,4 +1,4 @@
-package dev.garby;
+package dev.garby.discordGameManager.server;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import java.io.*;
 import java.util.Scanner;
 
-import static dev.garby.Constants.*;
+import static dev.garby.discordGameManager.server.Constants.*;
 
 public class McServer {
     private static final Logger logger = LoggerFactory.getLogger(McServer.class);
